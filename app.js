@@ -1,7 +1,7 @@
 var cabApp = angular.module('cabApp', ['ngRoute', 'ngResource']);
 var placeSearch, sourceAuto, destAuto;
-var uberClientId = 'T9j2Lj1dnihJUA9P58gLVaDkDFQb-rqD'
-    , uberServerToken = 'naAqhVrDKbYU6O5ytfA5VjDXOAZf4iaJTRy1ok81';
+var uberClientId = '<uber_client_id>'
+    , uberServerToken = '<uber_server_token>';
 // ROUTES
 cabApp.config(function ($routeProvider) {
     $routeProvider.when('/', {
@@ -141,7 +141,7 @@ cabApp.controller('resultController', ['$scope', '$http', '$resource', 'location
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });
-        var token = "J_YbQUi4c5cq:YR6T71_hfUpQi8TM0p93iuP2z9bwVh8S";
+        var token = "<lyft_client_id>:<lyft_client_secret>";
         $http({
             method: 'POST'
             , url: 'https://api.lyft.com/oauth/token'
